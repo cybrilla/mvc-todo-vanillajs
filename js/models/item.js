@@ -1,7 +1,11 @@
 function Item() {
+	this.attributes = {
+		id : null,
+		title: '',
+		name: ''
+	}
+}
 
-	this.id = null;
-	this.title = '';
-	this.name = 'todo-list';
-
+Item.prototype.setAtrributes = function(key,value) {
+	this.attributes[key] = value;
 }
