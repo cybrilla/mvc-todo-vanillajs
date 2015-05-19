@@ -6,6 +6,6 @@ function Item() {
 	}
 }
 
-Item.prototype.setAtrributes = function(key,value) {
+Item.prototype.setAttributes = function(key,value) {
 	this.attributes[key] = value;
 }

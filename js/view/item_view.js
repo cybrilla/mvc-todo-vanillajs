@@ -1,16 +1,27 @@
 function ItemView() {
-	this.el = 'h2';
+	var that = this;
+
 	this.data = {};
-	this.$el = $("<"+this.el+"/>", {
-		class: 'header'
-	});
+	
+  
 }
 
 ItemView.prototype.setData = function(_data) {
 	this.data = _data;
 };
 
-ItemView.prototype.render = function() {
-	this.$el.html(this.data.title);
-	$("body").html(this.$el);
+ItemView.prototype.render = function(callback) {
+	var that = this;
+	if(this.$el) {
+		that.$el.html(this.data.title);
+	}
+	else {
+		$.get("/templates/items/show.html", function(data, status){
+  		that.$el = $(data);
+  		callback();
+  		that.$el.find('span').html(that.data.title);
+  	});	
+	}
+		
+		
 }

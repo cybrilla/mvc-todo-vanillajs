@@ -1,9 +1,9 @@
 $(function() {
 
-	var view = new ItemView(),
-	model = new Item;
-	model.setAtrributes('title','TODO-LIST')
-	view.setData(model.attributes);
-	view.render();
-	
+	window.itemListView = new ItemListView();
+	window.itemListView.render();
+
+	var addlistview = new AddListView();
+	addlistview.render();
+
 });
