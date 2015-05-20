@@ -21,7 +21,10 @@ ItemView.prototype.render = function(callback) {
   		callback();
   		that.$el.find('span').html(that.data.title);
   	});	
-	}
-		
-		
+	}		
+}
+
+function remo(event) {
+	var currentElement = event.currentTarget;
+	currentElement.closest("li").remove();
 }

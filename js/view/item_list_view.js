@@ -11,9 +11,9 @@ ItemListView.prototype.render = function() {
 
 }
 
-ItemListView.prototype.triggerAdd = function(itemView) {
+ItemListView.prototype.triggerAdd = function(itemView,input) {
 	var that = this;
-	
+	input.value = "";
 	itemView.render(function() {
 		that.$el.append(itemView.$el);
 		that.render();	

@@ -15,8 +15,7 @@ function AddListView() {
 
 			item.setAttributes('title', this.value);
 			itemView.setData(item.attributes);
-			window.itemListView.triggerAdd(itemView);
-			// console.log(this);
+			window.itemListView.triggerAdd(itemView,this);
 		}
 	});
 }
